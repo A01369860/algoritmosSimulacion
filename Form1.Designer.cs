@@ -90,7 +90,7 @@
             dataGridView1.Location = new Point(125, 393);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(898, 438);
+            dataGridView1.Size = new Size(726, 438);
             dataGridView1.TabIndex = 5;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
