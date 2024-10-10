@@ -96,6 +96,9 @@ namespace algoritmosSimulacion
             exportarExcel.Visible = true;
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DescargaExcel(dataGridView1);
+        }
     }
 }
