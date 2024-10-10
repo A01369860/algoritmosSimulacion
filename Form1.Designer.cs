@@ -80,9 +80,10 @@
             label2.AutoSize = true;
             label2.Location = new Point(125, 173);
             label2.Name = "label2";
-            label2.Size = new Size(100, 32);
+            label2.Size = new Size(122, 32);
             label2.TabIndex = 4;
-            label2.Text = "Máximo";
+            label2.Text = "Número 1";
+            label2.Click += label2_Click;
             // 
             // dataGridView1
             // 
@@ -124,9 +125,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(125, 280);
             label4.Name = "label4";
-            label4.Size = new Size(97, 32);
+            label4.Size = new Size(122, 32);
             label4.TabIndex = 9;
-            label4.Text = "Mínimo";
+            label4.Text = "Número 2";
             // 
             // Form1
             // 

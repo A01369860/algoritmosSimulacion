@@ -11,18 +11,19 @@ namespace algoritmosSimulacion.algoritmos
     public class GeneradorNumerosAleatorios
     {
         public GeneradorNumerosAleatorios() { }
-        public List<Class1> CrearListaOrigen(int puntosTotales, int limiteInferior, 
-            int limiteSuperior)
+        public List<Class1> CrearListaOrigen(int puntosTotales, double seed1, 
+            double seed2)
         {
             List<Class1> listaClass1 = new List<Class1>(); 
             for (int i = 0; i < puntosTotales; i++){
-                Random aleatorio = new Random(); // es pseudoaleatorio, checa el tiemmpo de compu
+          
                 Class1 generador = new Class1();
-                generador.Latitud = aleatorio.Next(limiteInferior, limiteSuperior);
-                generador.Longitud = aleatorio.Next(limiteInferior, limiteSuperior);
+
+                generador.Producto = (seed1 * seed2); 
+                generador.ProdMedio = 
                 generador.IdPunto = i;
-                generador.Especie = i.ToString();
-                generador.Activo = false;
+                generador.Valor1 = 
+                generador.Valor2 = 
 
                 listaClass1.Add(generador);
             }
