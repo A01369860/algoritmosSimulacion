@@ -27,14 +27,14 @@ namespace algoritmosSimulacion
 
             // Paso 1: Inicializacion de parametros
             int puntosTotales = Convert.ToInt32(textBox1.Text);
-            int maximo = Convert.ToInt32(textBox2.Text);
-            int minimo = Convert.ToInt32(textBox3.Text);
+            int num1 = Convert.ToInt32(textBox2.Text);
+            int num2 = Convert.ToInt32(textBox3.Text);
 
             // Paso 2: Llamar algoritmo
             GeneradorNumerosAleatorios generador = new GeneradorNumerosAleatorios();
 
             // Paso 3
-            List<Class1> listaSalida = generador.CrearListaOrigen(puntosTotales, minimo, maximo);
+            List<Class1> listaSalida = generador.CrearListaOrigen(puntosTotales, num1, num2);
 
             // Paso 4
             llenarGrid(listaSalida);
@@ -46,20 +46,28 @@ namespace algoritmosSimulacion
             string numeroColumna1 = "1";
             string numeroColumna2 = "2";
             string numeroColumna3 = "3";
+            string numeroColumna4 = "4";
+            string numeroColumna5 = "5";
+            string numeroColumna6 = "6";
+            string numeroColumna7 = "7";
 
             // Paso 1: Determinas la cantidad de columnas
             dataGridView1.Columns.Clear();
             dataGridView1.Columns.Add(numeroColumna1, "Id");
-            dataGridView1.Columns.Add(numeroColumna2, "Latitud");
-            dataGridView1.Columns.Add(numeroColumna3, "Longitud");
+            dataGridView1.Columns.Add(numeroColumna2, "R(n)");
+            dataGridView1.Columns.Add(numeroColumna3, "R(n+1)");
+            dataGridView1.Columns.Add(numeroColumna4, "R(n)2");
+            dataGridView1.Columns.Add(numeroColumna5, "M.R(n)2");
+            dataGridView1.Columns.Add(numeroColumna6, "Val 1");
+            dataGridView1.Columns.Add(numeroColumna7, "Val 2");
 
             // Paso 2: Recorres el grid para cada fila y llenar de valores aleatorios
             for (int i = 0; i < lista.Count; i++)
             {
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna1) - 1].Value = (lista[i].IdPunto).ToString();
-                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna2) - 1].Value = lista[i].Latitud.ToString();
-                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna3) - 1].Value = lista[i].Longitud.ToString();
+                //dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna2) - 1].Value = lista[i].Producto.ToString();
+                //dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna3) - 1].Value = lista[i].ProdMedio.ToString();
             }
 
         }
