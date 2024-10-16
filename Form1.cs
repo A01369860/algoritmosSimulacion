@@ -63,6 +63,8 @@ namespace algoritmosSimulacion
             dataGridView1.Columns.Add(numeroColumna6, "Panel5");
             dataGridView1.Columns.Add(numeroColumna7, "Valor");
 
+            List<decimal> valoresColumna7 = new List<decimal>();
+
 
             // Paso 2: Recorres el grid para cada fila y llenar de valores aleatorios
             for (int i = 0; i < lista.Count; i++)
@@ -75,7 +77,21 @@ namespace algoritmosSimulacion
                 dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna5) - 1].Value = lista[i].Panel4.ToString();
                 dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna6) - 1].Value = lista[i].Panel5.ToString();
                 dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna7) - 1].Value = lista[i].Valor.ToString();
+
+               
+                decimal valorColumna7 = lista[i].Valor;
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna7) - 1].Value = valorColumna7.ToString();
+
+                
+                valoresColumna7.Add(valorColumna7);
             }
+
+           
+            decimal promedio = valoresColumna7.Average();
+
+
+            MessageBox.Show($"Promedio de los valores de la columna 7: {promedio}", "Promedio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
         }
 
