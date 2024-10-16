@@ -40,29 +40,45 @@ namespace algoritmosSimulacion
             llenarGrid(listaSalida);
         }
 
+
+
         public void llenarGrid(List<Class1> lista)
         {
             // Paso 0: Indicas el numero de columnas
             string numeroColumna1 = "1";
             string numeroColumna2 = "2";
             string numeroColumna3 = "3";
+            string numeroColumna4 = "4";
+            string numeroColumna5 = "5";
+            string numeroColumna6 = "6";
+            string numeroColumna7 = "7";
 
             // Paso 1: Determinas la cantidad de columnas
             dataGridView1.Columns.Clear();
             dataGridView1.Columns.Add(numeroColumna1, "Id");
-            dataGridView1.Columns.Add(numeroColumna2, "Latitud");
-            dataGridView1.Columns.Add(numeroColumna3, "Longitud");
+            dataGridView1.Columns.Add(numeroColumna2, "Panel1");
+            dataGridView1.Columns.Add(numeroColumna3, "Panel2");
+            dataGridView1.Columns.Add(numeroColumna4, "Panel3");
+            dataGridView1.Columns.Add(numeroColumna5, "Panel4");
+            dataGridView1.Columns.Add(numeroColumna6, "Panel5");
+            dataGridView1.Columns.Add(numeroColumna7, "Valor");
+
 
             // Paso 2: Recorres el grid para cada fila y llenar de valores aleatorios
             for (int i = 0; i < lista.Count; i++)
             {
                 dataGridView1.Rows.Add();
-                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna1) - 1].Value = (lista[i].IdPunto).ToString();
-                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna2) - 1].Value = lista[i].Latitud.ToString();
-                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna3) - 1].Value = lista[i].Longitud.ToString();
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna1) - 1].Value = lista[i].IdExp.ToString();
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna2) - 1].Value = lista[i].Panel1.ToString();
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna3) - 1].Value = lista[i].Panel2.ToString();
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna4) - 1].Value = lista[i].Panel3.ToString();
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna5) - 1].Value = lista[i].Panel4.ToString();
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna6) - 1].Value = lista[i].Panel5.ToString();
+                dataGridView1.Rows[i].Cells[Int32.Parse(numeroColumna7) - 1].Value = lista[i].Valor.ToString();
             }
 
         }
+
 
         public void DescargaExcel(DataGridView data)
         {
@@ -99,6 +115,26 @@ namespace algoritmosSimulacion
         private void button2_Click(object sender, EventArgs e)
         {
             DescargaExcel(dataGridView1);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

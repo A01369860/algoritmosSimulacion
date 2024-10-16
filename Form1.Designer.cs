@@ -60,6 +60,7 @@
             label1.Size = new Size(168, 32);
             label1.TabIndex = 1;
             label1.Text = "Puntos Totales\r\n";
+            label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -67,6 +68,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(221, 39);
             textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -80,9 +82,10 @@
             label2.AutoSize = true;
             label2.Location = new Point(125, 173);
             label2.Name = "label2";
-            label2.Size = new Size(100, 32);
+            label2.Size = new Size(175, 32);
             label2.TabIndex = 4;
-            label2.Text = "Máximo";
+            label2.Text = "Rango Máximo";
+            label2.Click += label2_Click;
             // 
             // dataGridView1
             // 
@@ -118,15 +121,16 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(221, 39);
             textBox3.TabIndex = 8;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(125, 280);
             label4.Name = "label4";
-            label4.Size = new Size(97, 32);
+            label4.Size = new Size(172, 32);
             label4.TabIndex = 9;
-            label4.Text = "Mínimo";
+            label4.Text = "Rango Mínimo";
             // 
             // Form1
             // 
